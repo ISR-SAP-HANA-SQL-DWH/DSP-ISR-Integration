@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@sap/hana-client": "^2.23.24",
     "axios": "^1.7.9",
     "simple-git": "^3.27.0",
     "ts-node": "^10.9.2",

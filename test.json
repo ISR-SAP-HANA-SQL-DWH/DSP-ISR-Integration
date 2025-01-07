@@ -1,0 +1,64 @@
+{
+  "definitions": {
+    "PAR_ISR_M_2VD_HOURS": {
+      "kind": "entity",
+      "elements": {
+        "HOUR": {
+          "@EndUserText.label": "Hours",
+          "type": "cds.String",
+          "length": 100,
+          "key": true,
+          "notNull": true,
+          "@Analytics.dimension": true
+        },
+        "HOUR_GROUP_2": {
+          "@EndUserText.label": "Hours Group 1",
+          "type": "cds.String",
+          "length": 100,
+          "@Analytics.dimension": true
+        },
+        "HOUR_GROUP_4": {
+          "@EndUserText.label": "Hours Group 2",
+          "type": "cds.String",
+          "length": 100,
+          "@Analytics.dimension": true
+        }
+      },
+      "@EndUserText.label": "Hours",
+      "@ObjectModel.modelingPattern": {
+        "#": "ANALYTICAL_DIMENSION"
+      },
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "ANALYTICAL_DIMENSION"
+        }
+      ],
+      "@Hierarchy.leveled": [
+        {
+          "name": "Hierarchy",
+          "label": "Hierarchy",
+          "levels": [
+            {
+              "element": {
+                "=": "HOUR"
+              }
+            },
+            {
+              "element": {
+                "=": "HOUR_GROUP_2"
+              }
+            },
+            {
+              "element": {
+                "=": "HOUR_GROUP_4"
+              }
+            }
+          ]
+        }
+      ],
+      "@Analytics.dbViewType": "TABLE_FUNCTION",
+      "@DataWarehouse.consumption.external": false,
+      "@DataWarehouse.tableFunction.script": "/**\n    * return select \"Column1\",\"Column2\" from \"table\";\n*/\nreturn\nSELECT \"HOUR\",\n\t\"HOUR_GROUP_2\",\n\t\"HOUR_GROUP_4\"\nFROM \"ISR\".\"PAR_ISR_M_0LT_HOURS\"\n;"
+    }
+  }
+}
