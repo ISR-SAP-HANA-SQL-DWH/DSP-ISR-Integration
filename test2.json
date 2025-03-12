@@ -1,0 +1,119 @@
+{
+  "definitions": {
+    "V_T016": {
+      "kind": "entity",
+      "elements": {
+        "MANDT": {
+          "@EndUserText.label": "MANDT",
+          "type": "cds.String",
+          "length": 3,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "key": true,
+          "notNull": true
+        },
+        "BRSCH": {
+          "@EndUserText.label": "BRSCH",
+          "type": "cds.String",
+          "length": 4,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "key": true,
+          "notNull": true
+        }
+      },
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "RT_T016"
+            ]
+          },
+          "columns": [
+            {
+              "key": true,
+              "ref": [
+                "MANDT"
+              ]
+            },
+            {
+              "key": true,
+              "ref": [
+                "BRSCH"
+              ]
+            }
+          ]
+        }
+      },
+      "@EndUserText.label": "V_T016",
+      "@ObjectModel.modelingPattern": {
+        "#": "DATA_STRUCTURE"
+      },
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "DATA_STRUCTURE"
+        }
+      ],
+      "@DataWarehouse.consumption.external": true,
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": "Folder_ICJAQRYH"
+        }
+      }
+    },
+    "RT_T016": {
+      "kind": "entity",
+      "@DataWarehouse.remote.connection": "CC_S4_HANA_DB",
+      "@DataWarehouse.remote.entity": "<NULL>SAPHANADBT016",
+      "elements": {
+        "MANDT": {
+          "type": "cds.String",
+          "length": 3,
+          "@EndUserText.label": "MANDT",
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "notNull": true,
+          "key": true
+        },
+        "BRSCH": {
+          "type": "cds.String",
+          "length": 4,
+          "@EndUserText.label": "BRSCH",
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "notNull": true,
+          "key": true
+        }
+      },
+      "@ObjectModel.modelingPattern": {
+        "#": "DATA_STRUCTURE"
+      },
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "DATA_STRUCTURE"
+        },
+        {
+          "#": "SQL_DATA_SOURCE"
+        }
+      ],
+      "@EndUserText.label": "RT_T016",
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": "Folder_ICJAQRYH"
+        }
+      }
+    }
+  },
+  "version": {
+    "csn": "1.0"
+  },
+  "meta": {
+    "creator": "CDS Compiler v1.19.2"
+  },
+  "editorSettings": {
+    "V_T016": {
+      "editor": {
+        "lastModifier": "GRAPHICALVIEWBUILDER",
+        "default": "GRAPHICALVIEWBUILDER"
+      },
+      "uiModel": "{\"contents\":{\"a4ceed30-f516-45c3-99ca-603bb44d810e\":{\"classDefinition\":\"sap.cdw.querybuilder.Model\",\"name\":\"V_T016\",\"label\":\"V_T016\",\"modificationDate\":0,\"deploymentDate\":0,\"#objectStatus\":0,\"output\":\"1b39cfef-b6e7-4076-9b9a-1f35cada0cb5\",\"nodes\":{\"1b39cfef-b6e7-4076-9b9a-1f35cada0cb5\":{\"name\":\"V_T016\"},\"db468767-5dba-47a6-9e66-aaf5c190af2a\":{\"name\":\"RT_T016\"}},\"diagrams\":{\"84558920-345a-4a68-93b9-e780bdc22119\":{}}},\"1b39cfef-b6e7-4076-9b9a-1f35cada0cb5\":{\"classDefinition\":\"sap.cdw.querybuilder.Output\",\"name\":\"V_T016\",\"type\":\"graphicView\",\"isPinToMemoryEnabled\":false,\"modificationDate\":0,\"deploymentDate\":0,\"#objectStatus\":0,\"elements\":{\"afcd1fa9-e4bb-4374-b884-f8de807f868a\":{\"name\":\"MANDT\"},\"9a124d55-607d-44c8-93d7-52ec7005862d\":{\"name\":\"BRSCH\"}}},\"84558920-345a-4a68-93b9-e780bdc22119\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.Diagram\",\"symbols\":{\"d898f1c6-1161-4697-a1e0-6473fd58bcbe\":{},\"c6bf3879-6529-443f-a22a-610350908159\":{\"name\":\"Entity Symbol 1\"},\"8878e986-d444-4ec9-a9d1-78beff9a64a7\":{}}},\"d898f1c6-1161-4697-a1e0-6473fd58bcbe\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.OutputSymbol\",\"x\":47,\"y\":-20,\"width\":140,\"height\":40,\"object\":\"1b39cfef-b6e7-4076-9b9a-1f35cada0cb5\"},\"db468767-5dba-47a6-9e66-aaf5c190af2a\":{\"classDefinition\":\"sap.cdw.querybuilder.Entity\",\"name\":\"RT_T016\",\"label\":\"RT_T016\",\"type\":8,\"remote\":{\"connection\":\"CC_S4_HANA_DB\",\"table\":\"<NULL>SAPHANADBT016\"},\"isPinToMemoryEnabled\":false,\"isAllowConsumption\":false,\"isHiddenInUi\":false,\"modificationDate\":0,\"deploymentDate\":1730970993000,\"#objectStatus\":\"1\",\"elements\":{\"42f521ff-ba22-4554-8b39-5bf26ac83534\":{\"name\":\"MANDT\"},\"e67c6428-4deb-4b75-884b-31e3eed2a617\":{\"name\":\"BRSCH\"}},\"successorNode\":\"1b39cfef-b6e7-4076-9b9a-1f35cada0cb5\"},\"42f521ff-ba22-4554-8b39-5bf26ac83534\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"MANDT\",\"label\":\"MANDT\",\"newName\":\"MANDT\",\"indexOrder\":0,\"isKey\":true,\"length\":3,\"precision\":0,\"scale\":0,\"nativeDataType\":\"NVARCHAR\",\"isNotNull\":true,\"successorElement\":\"afcd1fa9-e4bb-4374-b884-f8de807f868a\"},\"e67c6428-4deb-4b75-884b-31e3eed2a617\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"BRSCH\",\"label\":\"BRSCH\",\"newName\":\"BRSCH\",\"indexOrder\":1,\"isKey\":true,\"length\":4,\"precision\":0,\"scale\":0,\"nativeDataType\":\"NVARCHAR\",\"isNotNull\":true,\"successorElement\":\"9a124d55-607d-44c8-93d7-52ec7005862d\"},\"c6bf3879-6529-443f-a22a-610350908159\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.EntitySymbol\",\"name\":\"Entity Symbol 1\",\"x\":-163,\"y\":-20,\"width\":160,\"displayName\":\"Entity Symbol 1\",\"object\":\"db468767-5dba-47a6-9e66-aaf5c190af2a\"},\"afcd1fa9-e4bb-4374-b884-f8de807f868a\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"MANDT\",\"label\":\"MANDT\",\"newName\":\"MANDT\",\"indexOrder\":0,\"isKey\":true,\"length\":3,\"precision\":0,\"scale\":0,\"nativeDataType\":\"NVARCHAR\",\"isNotNull\":true},\"9a124d55-607d-44c8-93d7-52ec7005862d\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"BRSCH\",\"label\":\"BRSCH\",\"newName\":\"BRSCH\",\"indexOrder\":1,\"isKey\":true,\"length\":4,\"precision\":0,\"scale\":0,\"nativeDataType\":\"NVARCHAR\",\"isNotNull\":true},\"8878e986-d444-4ec9-a9d1-78beff9a64a7\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.AssociationSymbol\",\"points\":\"-3,0 47,0\",\"contentOffsetX\":5,\"contentOffsetY\":5,\"sourceSymbol\":\"c6bf3879-6529-443f-a22a-610350908159\",\"targetSymbol\":\"d898f1c6-1161-4697-a1e0-6473fd58bcbe\"}}}"
+    }
+  },
+  "$version": "1.0"
+}
