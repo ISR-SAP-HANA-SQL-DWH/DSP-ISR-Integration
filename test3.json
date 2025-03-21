@@ -1,0 +1,56 @@
+{
+  "definitions": {
+    "Ansprechpartner": {
+      "kind": "entity",
+      "@ObjectModel.modelingPattern": {
+        "#": "DATA_STRUCTURE"
+      },
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "DATA_STRUCTURE"
+        }
+      ],
+      "@DataWarehouse.dataSource.schema": "SAND_BOX_FATEMEH#WRG_MKU2OJ9Y7B0L6UD2",
+      "@DataWarehouse.dataSource.entity": "sap.dataset.conf_703e8e4b-bb6c-4458-b75b-3db70ec19340_view",
+      "@EndUserText.label": "Ansprechpartner",
+      "elements": {
+        "AnsprechparnerID": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "AnsprechparnerID"
+        },
+        "Name": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "Name"
+        },
+        "Email-Adresse": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "Email-Adresse"
+        },
+        "Durchwahl": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "Durchwahl"
+        },
+        "Geschlecht": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "Geschlecht"
+        }
+      },
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": null
+        }
+      }
+    }
+  },
+  "version": {
+    "csn": "1.0"
+  },
+  "meta": {
+    "creator": "CDS Compiler v1.19.2"
+  },
+  "$version": "1.0"
+}
